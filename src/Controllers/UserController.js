@@ -2,7 +2,7 @@ const User = require("../Models/User");
 
 module.exports = {
   async createUser(req, res) {
-    const { username, password, name, description, site } = req.body;
+    const { username, password, name, description, site, avatar } = req.body;
 
     try {
       const userAlreadyExists = await User.findOne({
@@ -17,6 +17,7 @@ module.exports = {
         name,
         description,
         site,
+        avatar,
       });
 
       return res.status(201).send({
