@@ -19,8 +19,10 @@ mongoose
 
 app.use(express.json());
 app.use(router);
-app.use(cors);
-
-app.listen(process.env.PORT || 3333, () =>
-  console.log("Server running on port 3333")
+app.use(
+  cors({
+    origin: "https://gorgeous-hamster-e27218.netlify.app/",
+  })
 );
+
+app.listen(process.env.PORT, () => console.log("Server running"));
