@@ -19,10 +19,6 @@ mongoose
 
 app.use(express.json());
 app.use(router);
-app.use(
-  cors({
-    origin: "https://gorgeous-hamster-e27218.netlify.app/",
-  })
-);
+app.use(cors());
 
 app.listen(process.env.PORT, () => console.log("Server running"));
