@@ -19,12 +19,13 @@ mongoose
   });
 
 app.use(express.json());
-app.use(router);
 
 app.use(
   cors({
     origin: "*",
   })
 );
+
+app.use(router);
 
 app.listen(process.env.PORT, () => console.log("Server running"));
