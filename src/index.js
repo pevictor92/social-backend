@@ -28,4 +28,4 @@ app.use(
 
 app.use(router);
 
-app.listen(process.env.PORT, () => console.log("Server running"));
+app.listen(process.env.PORT || 3333, () => console.log("Server running"));
